@@ -5,21 +5,25 @@ function StatButtonList() {
 
   const masterStatButtonList = [
     {
-      buttonName: 'Feed'
+      statButtonName: 'Feed',
+      statButtonColor: '#00B12A'
     },
     {
-      buttonName: 'Exercise'
+      statButtonName: 'Exercise',
+      statButtonColor: '#00A1B3'
     },
     {
-      buttonName: 'Rest'
+      statButtonName: 'Rest',
+      statButtonColor: '#DA003A'
     }
   ]
 
   return(
     <div>
-      {masterStatButtonList.map((button, index) =>
+      {masterStatButtonList.map((statButton, index) =>
         <StatButton
-          buttonName={button.buttonName}
+          statButtonName={statButton.statButtonName}
+          statButtonColor={statButton.statButtonColor}
           key={index}
           />
       )}
