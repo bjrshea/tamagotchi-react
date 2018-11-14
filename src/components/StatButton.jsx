@@ -2,13 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function StatButton(props) {
+
+  const statButtonStyles = {
+    backgroundColor: `${props.statButtonColor}`
+  }
+
   return(
-    <button>{props.buttonName}</button>
+    <button style={statButtonStyles}>{props.statButtonName}</button>
   );
 }
 
 StatButton.propTypes = {
-  buttonName: PropTypes.string
+  statButtonName: PropTypes.string,
+  statButtonColor: PropTypes.string
 }
 
 export default StatButton;

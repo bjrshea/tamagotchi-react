@@ -5,13 +5,16 @@ function TamagotchiStatsList() {
 
   const masterStatList = [
     {
-      statId: 'feedStat'
+      statId: 'feedStat',
+      statColor: '#00B12A'
     },
     {
-      statId: 'exerciseStat'
+      statId: 'exerciseStat',
+      statColor: '#00A1B3'
     },
     {
-      statId: 'restStat'
+      statId: 'restStat',
+      statColor: '#DA003A'
     }
   ]
 
@@ -20,6 +23,7 @@ function TamagotchiStatsList() {
       {masterStatList.map((stat, index) =>
         <Stat
           statId={stat.statId}
+          statColor={stat.statColor}
           key={index}
         />
       )}
