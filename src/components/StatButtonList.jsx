@@ -1,7 +1,8 @@
 import React from 'react';
 import StatButton from './StatButton';
+import PropTypes from 'prop-types';
 
-function StatButtonList() {
+function StatButtonList(props) {
 
   const masterStatButtonList = [
     {
@@ -32,11 +33,17 @@ function StatButtonList() {
           statButtonName={statButton.statButtonName}
           statButtonColor={statButton.statButtonColor}
           statButtonHoverColor={statButton.statButtonHoverColor}
+          onNewStatUpdate={props.onNewStatUpdate}
+          id={index}
           key={index}
         />
       )}
     </div>
   );
+}
+
+StatButtonList.propTypes = {
+  onNewStatUpdate: PropTypes.func
 }
 
 export default StatButtonList;
