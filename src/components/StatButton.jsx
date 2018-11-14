@@ -8,13 +8,22 @@ function StatButton(props) {
   }
 
   return(
-    <button style={statButtonStyles}>{props.statButtonName}</button>
+    <div>
+      <style>{`
+          #${props.statButtonId}:hover {
+            background-color: ${props.statButtonHoverColor}!important;
+          }
+      `}</style>
+    <button id={props.statButtonId} style={statButtonStyles}>{props.statButtonName}</button>
+    </div>
   );
 }
 
 StatButton.propTypes = {
+  statButtonId: PropTypes.string,
   statButtonName: PropTypes.string,
-  statButtonColor: PropTypes.string
+  statButtonColor: PropTypes.string,
+  statButtonHoverColor: PropTypes.string
 }
 
 export default StatButton;
