@@ -25,13 +25,29 @@ class App extends React.Component {
         }
       ]
     }
+    this.handleAddingStatAmount = this.handleAddingStatAmount.bind(this);
+  }
+
+  handleAddingStatAmount(compareKey) {
+    let newMasterStatList = this.state.masterStatList.slice();
+    let newStat = Object.assign({}, newMasterStatList[compareKey]);
+    let newStatAmount = newStat.statAmount + 10;
+    newStat.statAmount = newStatAmount;
+    newMasterStatList[compareKey] = newStat;
+    this.setState({
+      masterStatList: newMasterStatList
+    }, () => {
+      console.log(this.state.masterStatList);
+    });
   }
 
   render() {
     return (
       <div>
         <h1>Life of the Tamagotchi named Rielly</h1>
-        <StatButtonList/>
+        <StatButtonList
+          onNewStatUpdate={this.handleAddingStatAmount}
+        />
         <img/>
         <TamagotchiStatsList
           statList={this.state.masterStatList}
