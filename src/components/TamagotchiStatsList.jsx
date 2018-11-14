@@ -1,34 +1,25 @@
 import React from 'react';
 import Stat from './Stat';
+import PropTypes from 'prop-types';
 
-function TamagotchiStatsList() {
-
-  const masterStatList = [
-    {
-      statId: 'feedStat',
-      statColor: '#00B12A'
-    },
-    {
-      statId: 'exerciseStat',
-      statColor: '#00A1B3'
-    },
-    {
-      statId: 'restStat',
-      statColor: '#DA003A'
-    }
-  ]
+function TamagotchiStatsList(props) {
 
   return(
     <div>
-      {masterStatList.map((stat, index) =>
+      {props.statList.map((stat, index) =>
         <Stat
           statId={stat.statId}
           statColor={stat.statColor}
+          statAmount={stat.statAmount}
           key={index}
         />
       )}
     </div>
   );
+}
+
+TamagotchiStatsList.propTypes = {
+  statList: PropTypes.array
 }
 
 export default TamagotchiStatsList;
