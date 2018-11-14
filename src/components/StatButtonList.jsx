@@ -22,7 +22,7 @@ function StatButtonList() {
       statButtonColor: '#DA003A',
       statButtonHoverColor: '#C60029'
     }
-  ]
+  ];
 
   return(
     <div>
@@ -33,7 +33,7 @@ function StatButtonList() {
           statButtonColor={statButton.statButtonColor}
           statButtonHoverColor={statButton.statButtonHoverColor}
           key={index}
-          />
+        />
       )}
     </div>
   );
