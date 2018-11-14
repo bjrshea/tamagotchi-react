@@ -5,7 +5,7 @@ function StatButton(props) {
 
   const statButtonStyles = {
     backgroundColor: `${props.statButtonColor}`
-  }
+  };
 
   return(
     <div>
@@ -14,7 +14,7 @@ function StatButton(props) {
             background-color: ${props.statButtonHoverColor}!important;
           }
       `}</style>
-    <button id={props.statButtonId} style={statButtonStyles}>{props.statButtonName}</button>
+      <button id={props.statButtonId} style={statButtonStyles}>{props.statButtonName}</button>
     </div>
   );
 }
@@ -24,6 +24,6 @@ StatButton.propTypes = {
   statButtonName: PropTypes.string,
   statButtonColor: PropTypes.string,
   statButtonHoverColor: PropTypes.string
-}
+};
 
 export default StatButton;
