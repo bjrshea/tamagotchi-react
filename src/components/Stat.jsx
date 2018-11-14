@@ -8,12 +8,12 @@ function Stat(props) {
     height: '20px',
     backgroundColor: '#FFF',
     marginBottom: '10px'
-  }
+  };
   const statBarStyles = {
-    width: '100%',
+    width: `${props.statAmount}%`,
     height: '100%',
     backgroundColor: `${props.statColor}`
-  }
+  };
 
   return(
     <div style={statBarBackgroundStyles}>
@@ -24,7 +24,8 @@ function Stat(props) {
 
 Stat.propTypes = {
   statId: PropTypes.string,
-  statColor: PropTypes.string
-}
+  statColor: PropTypes.string,
+  statAmount: PropTypes.number
+};
 
 export default Stat;
