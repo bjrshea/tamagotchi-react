@@ -4,8 +4,12 @@ import PropTypes from 'prop-types';
 
 function TamagotchiStatsList(props) {
 
+  const TamagotchiStatsListStyles = {
+    padding: '0 20px'
+  }
+
   return(
-    <div>
+    <div style={TamagotchiStatsListStyles}>
       {props.statList.map((stat, index) =>
         <Stat
           statId={stat.statId}
@@ -20,6 +24,6 @@ function TamagotchiStatsList(props) {
 
 TamagotchiStatsList.propTypes = {
   statList: PropTypes.array
-}
+};
 
 export default TamagotchiStatsList;

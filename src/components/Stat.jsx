@@ -12,7 +12,8 @@ function Stat(props) {
   const statBarStyles = {
     width: `${props.statAmount}%`,
     height: '100%',
-    backgroundColor: `${props.statColor}`
+    backgroundColor: `${props.statColor}`,
+    float: 'left'
   };
 
   return(

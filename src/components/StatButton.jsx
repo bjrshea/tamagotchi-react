@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 function StatButton(props) {
 
-  console.log(props.onNewStatUpdate);
-
   const statButtonStyles = {
     backgroundColor: `${props.statButtonColor}`
   };
@@ -16,7 +14,7 @@ function StatButton(props) {
             background-color: ${props.statButtonHoverColor}!important;
           }
       `}</style>
-    <button id={props.statButtonId} onClick={() => {props.onNewStatUpdate(props.id)}} style={statButtonStyles}>{props.statButtonName}</button>
+      <button id={props.statButtonId} onClick={() => {props.onNewStatUpdate(props.id);}} style={statButtonStyles}>{props.statButtonName}</button>
     </div>
   );
 }

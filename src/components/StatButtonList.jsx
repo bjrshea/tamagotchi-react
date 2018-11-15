@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 
 function StatButtonList(props) {
 
+  const statButtonListStyles = {
+    display: 'flex',
+    justifyContent: 'center'
+  }
+
   const masterStatButtonList = [
     {
       statButtonId: 'feedButton',
@@ -26,7 +31,7 @@ function StatButtonList(props) {
   ];
 
   return(
-    <div>
+    <div style={statButtonListStyles}>
       {masterStatButtonList.map((statButton, index) =>
         <StatButton
           statButtonId={statButton.statButtonId}
@@ -44,6 +49,6 @@ function StatButtonList(props) {
 
 StatButtonList.propTypes = {
   onNewStatUpdate: PropTypes.func
-}
+};
 
 export default StatButtonList;
