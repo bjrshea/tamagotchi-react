@@ -90,3 +90,9 @@ class App extends React.Component {
   }
 }
 export default App;
+
+//Notes: Prevent stat bars from overflowing
+//Add individual stat decrease plus transition animation
+//Add end game and show play again button
+//Add start page
+//Add tamagotchi animation
