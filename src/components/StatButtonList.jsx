@@ -7,7 +7,7 @@ function StatButtonList(props) {
   const statButtonListStyles = {
     display: 'flex',
     justifyContent: 'center'
-  }
+  };
 
   const masterStatButtonList = [
     {
